@@ -10,7 +10,6 @@
 * Execute php artisan key:generate
 * Execute php artisan migrate
 * Execute php artisan db:seed
-* Execute php artisan serve
 
 Esse é o teste prático - Federal Soluções Técnicas.
 `Laravel 5.6` 
