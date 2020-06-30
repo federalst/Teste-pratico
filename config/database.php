@@ -1,8 +1,5 @@
 <?php
 
-/* Add getting a database connection of Heroku */
-$url = parse_url(getenv("DATABASE_URL"));
-
 return [
 
     /*
@@ -16,8 +13,8 @@ return [
     |
     */
 
-    /* 'default' => env('DB_CONNECTION', 'mysql'), */
-    'default' => env('DB_CONNECTION', 'pgsql'),
+    'default' => env('DB_CONNECTION', 'mysql'),
+
 
     /*
     |--------------------------------------------------------------------------
@@ -47,9 +44,9 @@ return [
             'driver' => 'mysql',
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'database' => env('DB_DATABASE', 'homestead'),
+            'username' => env('DB_USERNAME', 'homestead'),
+            'password' => env('DB_PASSWORD', 'secret'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
@@ -58,16 +55,17 @@ return [
             'engine' => null,
         ],
 
-        /* change for Heroku's DATABASE_URL */
         'pgsql' => [
-            'driver'   => 'pgsql',
-            'host'     => $url["host"],
-            'database' => substr($url["path"], 1),
-            'username' => $url['user'],
-            'password' => $url['pass'],
-            'charset'  => 'utf8',
-            'prefix'   => '',
-            'schema'   => 'public',
+            'driver' => 'pgsql',
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '5432'),
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'schema' => 'public',
+            'sslmode' => 'prefer',
         ],
 
         'sqlsrv' => [
