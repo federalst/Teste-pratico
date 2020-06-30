@@ -15,7 +15,7 @@ use Faker\Generator as Faker;
 //$faker = \Faker\Factory::create('pt_BR');
 
 
-$factory->define(FederalSt\User::class, function (Faker $faker) {
+$factory->define(App\User::class, function (Faker $faker) {
 
     return [
         'name' => $faker->name,
