@@ -1,0 +1,14 @@
+{
+  "name": "Laravel5.6 sample with Heroku",
+  "description": "Sample: This source code is about changing laravel source code v5.6 for Heroku",
+  "env": {
+    "APP_KEY": {
+      "description": "次のコマンドの結果を入力すること 'php artisan --no-ansi key:generate --show'",
+      "value": ""
+    }
+  },
+  "repository": "https://github.com/tabesfdc/laravel5.6-sample",
+  "addons": [
+    "heroku-postgresql"
+  ]
+}
