@@ -5,7 +5,7 @@
 
 ## Instalação 
 * Execute composer install
-* Renomei o arquivo .env.example para .env
+* Renomeie o arquivo .env.example para .env
 * Configure o acesso do seu banco de dados postgree no arquivo .env
 * Execute php artisan key:generate
 * Execute php artisan migrate
@@ -54,23 +54,16 @@ Existem dois tipos diferentes de usuários na aplicação:
 ### Requisitos
 - [ ] Usar Laravel
 - [ ] Usar banco de dados Postgres
-- [ ] Realizar operações de salvar, atualizar e excluir via AJAX.
 - [ ] Utilizar Soft Deleting ao excluir veículos.
 - [ ] Não ter regra de negócio nos Controllers.
 - [ ] Usar Event e Notifications para enviar os e-mail.
-- [ ] Deixar informações no README.MD como podemos executar sua aplicação.
+- [ ] Deixar informações no README.MD sobre como podemos executar sua aplicação.
 - [ ] Usar o github.
 
 ### Validações
 Os campos abaixo só podem ser aceitos no formato:
 - Placa: Formato com três letras e quatro números (AAA1111).
 - Ano: Formato apenas com números com, no máximo, 4 dígitos.
-
-### Consultas SQL
-É necessário enviar, por e-mail, duas consultas SQL
-
-- Buscar todos os veículos onde o proprietário tenho a letra “e” no nome e o veículo tenha o número 7 na placa.
-- Buscar todos os veículos onde o proprietário não esteja removido e que o ano seja maior que 2010.
 
 ### Como participar?
 - Fazer o fork desse repositório.
